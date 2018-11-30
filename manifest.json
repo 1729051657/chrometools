@@ -1,0 +1,34 @@
+{
+    "name": "Url Helper",
+    "version": "1.1.0",
+    "author": "Coco",
+    "manifest_version": 2,
+    "description": "Easily handle page url parameters by a google extension",
+    "permissions": [
+       "https://web2.qq.com/"
+    ],
+    "icons": {
+        "16": "images/icon-search.png",
+        "128": "images/icon-search.png"
+    },
+    "browser_action": {
+        "default_icon": "images/icon-search.png",
+        "default_popup": "html/popup.html"
+    },
+    "background": {
+        "scripts": [
+
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://web2.qq.com/"
+            ],
+            "js": [
+                "js/jquery-2.2.4.min.js",
+                "js/kdc.js"
+            ]
+        }
+    ]
+}
